@@ -13,8 +13,9 @@ sudo gem install bundler
 == Getting Started
 
 1. Download the sources:
-    Make Sure you have access to Private Git Repo / Mailto: sachins@tech-builders.com OR santoshm@tech-builders.com FOR QUERIES / ACCESS
-    git clone git://gitorious.org/CommunicationForum/CommunicationForum.git
+    Make Sure you have access to Private Git Repo / mail_to: sachins@tech-builders.com OR santoshm@tech-builders.com FOR QUERIES / ACCESS
+    
+    git clone https://github.com/santosh-1987/CommunicationForum.git
 
     cd CommunicationForum/
 
