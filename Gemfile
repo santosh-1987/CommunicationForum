@@ -18,8 +18,9 @@ end
 gem 'maruku'
 
 # ui
-gem 'haml', '>= 3.1.3'
-gem 'sass', '>= 3.1.10'
+gem 'haml-rails'#, '>= 3.1.3'
+#gem 'sass', '>= 3.1.10'
+gem 'sass-rails'#, "  ~> 3.2.0"
 gem 'compass-colors', '0.9.0'
 gem 'fancy-buttons', '1.1.1'
 gem 'kaminari'
@@ -79,12 +80,11 @@ gem 'rack-ssl', :require => false
 
 gem 'state_machine', '1.1.2'
 
-# gem 'xapian-ruby', '1.2.7.1'
-gem 'xapit', :git => 'git://github.com/kuadrosx/xapit.git'
+gem 'xapian-ruby', :git => 'git://github.com/garaio/xapian-ruby.git',:tag => "1.2.17"
+gem 'xapit', :git => 'git://github.com/kuadrosx/xapit.git'  
 group :assets do
   gem 'compass-rails'
   gem 'compass'
-  gem 'sass-rails', "  ~> 3.2.0"
   gem 'uglifier'
 end
 gem 'yui-compressor'
