@@ -13,26 +13,26 @@ sudo gem install bundler
 == Getting Started
 
 1. Download the sources:
+    Make Sure you have access to Private Git Repo / Mailto: sachins@tech-builders.com OR santoshm@tech-builders.com FOR QUERIES / ACCESS
+    git clone git://gitorious.org/CommunicationForum/CommunicationForum.git
 
-    git clone git://gitorious.org/shapado/shapado.git
-
-    cd shapado/
+    cd CommunicationForum/
 
 2. Configure the application
 
-    cp config/shapado.sample.yml config/shapado.yml
+    cp config/CommunicationForum.sample.yml config/CommunicationForum.yml
     cp config/mongoid.sample.yml config/mongoid.yml
     cp config/auth_providers.sample.yml config/auth_providers.yml
 
-    edit shapado.yml and auth_providers.yml
+    edit CommunicationForum.yml and auth_providers.yml
 
     Go to https://rpm.newrelic.com/ and create an account, then:
-    cp config/shapado.yml.sample config/newrelic.yml
+    cp config/CommunicationForum.yml.sample config/newrelic.yml
 
     If you don't want to use newrelic, just comment it out in the Gemfile.
 
     Go to https://rpm.newrelic.com/ and create an account, then:
-    cp config/shapado.yml.sample config/newrelic.yml
+    cp config/CommunicationForum.yml.sample config/newrelic.yml
 
     If you don't want to use newrelic, just comment it out in the Gemfile.
 
@@ -52,17 +52,17 @@ sudo gem install bundler
 
     rails server -e development
 
-7. When running shapado in production, you need to run:
+7. When running CommunicationForum in production, you need to run:
 
     jammit
 
 == Postfix config
 
 add the following text to /etc/aliases
-    shapado: "|/usr/local/rvm/bin/rvm 1.9.2 exec PATH/to/shapado/script/handle_email"
+    CommunicationForum: "|/usr/local/rvm/bin/rvm 1.9.2 exec PATH/to/CommunicationForum/script/handle_email"
 
 in /etc/postfix/main.cf
-    default_privs = shapado
+    default_privs = CommunicationForum
 
 then type
     sudo newaliases
@@ -71,21 +71,21 @@ then type
 
 Follow us on:
 
-* http://twitter.com/shapado
+* http://twitter.com/CommunicationForum
 
-* http://identi.ca/shapado
+* http://identi.ca/CommunicationForum
 
-* http://blog.ricodigo.com/shapado
+* http://blog.ricodigo.com/CommunicationForum
 
 Talk to us at:
 
-* irc://irc.freenode.org/shapado
+* irc://irc.freenode.org/CommunicationForum
 
-* http://shapado.com/chat
+* http://CommunicationForum.com/chat
 
-* contact \aT/ shapado d0t com
+* contact \aT/ CommunicationForum d0t com
 
-Report bugs at http://shapado.com and use the tags "bug" or "feature-request"
+Report bugs at http://CommunicationForum.com and use the tags "bug" or "feature-request"
 
 
 
