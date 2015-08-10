@@ -1,8 +1,8 @@
 require 'ostruct'
 
-config_file = "/etc/shapado.yml"
+config_file = "/etc/mongoid.yml"
 if !File.exist?(config_file)
-  config_file = Rails.root+"config/shapado.yml"
+  config_file = Rails.root+"config/mongoid.yml"
 end
 
 if !File.exist?(config_file)
@@ -17,9 +17,9 @@ end
 AppConfig = OpenStruct.new(options[Rails.env])
 
 # check config
-unless ENV["SHAPADO_NO_CHECK_CONFIG"]
+unless ENV["mongoid_NO_CHECK_CONFIG"]
   begin
-    known_options = YAML.load_file(Rails.root+"config/shapado.yml.sample")[Rails.env]
+    known_options = YAML.load_file(Rails.root+"config/mongoid.yml.sample")[Rails.env]
     if known_options
       known_options.each do |k, v|
         if AppConfig.send(k).nil?
