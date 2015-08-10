@@ -6,7 +6,7 @@ module Models
     included do
       field :address, :type => Hash, :default => {}
       field :position, :type => Hash, :default => {"lat" => 0.0, "long" => 0.0}
-      index [[:position, Mongo::GEO2D]]
+      # index [[:position, Mongo::GEO2D]]
 
       before_save :float_position
 
