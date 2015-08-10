@@ -1,7 +1,7 @@
 class NotificationConfig
   include Mongoid::Document
 
-  identity :type => String
+  #identity :type => String
 
   field :give_advice, :type => Boolean, :default => true
   field :activities, :type => Boolean, :default => true

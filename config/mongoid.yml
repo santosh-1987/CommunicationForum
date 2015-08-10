@@ -10,12 +10,12 @@ defaults: &defaults
 
 development:
   <<: *defaults
-  database: communication-development
+  database: communication_development
 
 test:
   <<: *defaults
-  database: communication-test
+  database: communication_test
 
 production:
   <<: *defaults
-  database: communication-production
+  database: communication_production
