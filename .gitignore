@@ -5,7 +5,6 @@
 *.orig
 coverage
 public/stylesheets/compiled/
-config/shapado.yml
 config/payments.yml
 data/*.dat
 base_packaged.*
