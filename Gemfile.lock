@@ -13,6 +13,14 @@ GIT
       uuidtools (>= 2.1.1)
 
 GIT
+  remote: git://github.com/dcu/multiauth.git
+  revision: 76b936077d887c8e67248ec2894a408084f66d2c
+  specs:
+    multiauth (0.2.7)
+      omniauth
+      rails (>= 3.0.0)
+
+GIT
   remote: git://github.com/dcu/poirot.git
   revision: 032f2549c29ad33fbbed4bf9eadc12bb41473e7c
   specs:
@@ -71,14 +79,6 @@ GIT
   revision: 5ad5689886043e312e505585a291c85f9e50a761
   specs:
     rdiscount (1.6.8)
-
-GIT
-  remote: http://github.com/dcu/multiauth.git
-  revision: 76b936077d887c8e67248ec2894a408084f66d2c
-  specs:
-    multiauth (0.2.7)
-      omniauth
-      rails (>= 3.0.0)
 
 GIT
   remote: https://github.com/Houdini/mongo_store.git
