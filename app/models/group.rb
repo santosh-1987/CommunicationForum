@@ -187,11 +187,7 @@ class Group
     users = User.where(:_id.in => ids)
   end
 
-  #index([
-    [:state, Mongo::ASCENDING],
-    [:domain, Mongo::ASCENDING],
-  ], :unique => true)
-
+  #index([    [:state, Mongo::ASCENDING],    [:domain, Mongo::ASCENDING],  ], :unique => true)
   # TODO: store this variable
   def has_custom_domain?
     @has_custom_domain ||= self[:domain].to_s !~ /#{AppConfig.domain}/
@@ -379,7 +375,7 @@ class Group
   end
 
   def has_facebook_login?
-    (self.auth_providers.include?("Facebook") && self.domain.#index(AppConfig.domain)) || (self.share && self.share.fb_active)
+    (self.auth_providers.include?("Facebook") && self.domain.index(AppConfig.domain)) || (self.share && self.share.fb_active)
   end
 
   def version_expired?

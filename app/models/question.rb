@@ -23,11 +23,7 @@ class Question
   end
 
   #index :tags
-  #index [
-    [:group_id, Mongo::ASCENDING],
-    [:banned, Mongo::ASCENDING],
-    [:language, Mongo::ASCENDING]
-  ]
+  #index [    [:group_id, Mongo::ASCENDING],    [:banned, Mongo::ASCENDING],    [:language, Mongo::ASCENDING]  ]
 
   identity :type => String
 
@@ -75,10 +71,7 @@ class Question
   referenced_in :group
   #index :group_id
 
-  #index([
-    [:group_id, Mongo::ASCENDING],
-    [:slug, Mongo::ASCENDING],
-  ], :unique => true, :sparse => true)
+  #index([    [:group_id, Mongo::ASCENDING],    [:slug, Mongo::ASCENDING],  ], :unique => true, :sparse => true)
 
   field :followers_count, :type => Integer, :default => 0
   references_and_referenced_in_many :followers, :class_name => "User", :validate => false
