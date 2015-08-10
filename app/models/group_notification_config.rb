@@ -1,7 +1,7 @@
 class GroupNotificationConfig
   include Mongoid::Document
 
-  identity :type => String
+  #identity :type => String
 
   field :questions_to_twitter, :type => Boolean, :default => false
   field :badges_to_twitter, :type => Boolean, :default => false

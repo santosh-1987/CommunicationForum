@@ -17,7 +17,7 @@ class Badge
     @tokens ||= GOLD + SILVER + BRONZE
   end
 
-  identity :type => String
+  #identity :type => String
 
   referenced_in :user
   validates_presence_of :user

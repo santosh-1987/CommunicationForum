@@ -11,7 +11,7 @@ class ConstrainsConfig
                   edit_others_posts view_offensive_counts vote_to_close_any_question
                   vote_to_open_any_question delete_closed_questions moderate ask answer]
 
-  identity :type => String
+  #identity :type => String
   field :content, :type => Hash, :default => {}
   field :name, :type => String
   slug_key :name, :unique => true

@@ -9,7 +9,7 @@ class OpenRequest
     activity.add_followers(*follower_ids)
   end
 
-  identity :type => String
+  #identity :type => String
 
   field :user_id, :type => String
   referenced_in :user

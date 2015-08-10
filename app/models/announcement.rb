@@ -2,7 +2,7 @@ class Announcement
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  identity :type => String
+  #identity :type => String
 
   field :message, :type => String
   field :starts_at, :type => Timestamp

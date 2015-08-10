@@ -14,7 +14,7 @@ class Page
     activity.add_followers(*follower_ids)
   end
 
-  identity :type => String
+  #identity :type => String
   field :title, :type => String
   field :body, :type => String
   field :wiki, :type => Boolean, :default => false

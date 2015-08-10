@@ -14,7 +14,7 @@ class Group
                  "support", "survey", "download", "downloads", "faqs", "wiki",
                  "assets1", "assets2", "assets3", "assets4", "staging", "code"]
 
-  identity :type => String
+  #identity :type => String
 
   field :name, :type => String
   field :subdomain, :type => String

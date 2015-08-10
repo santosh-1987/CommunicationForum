@@ -1,7 +1,7 @@
 class FollowUp
   include Mongoid::Document
 
-  identity :type => String
+  #identity :type => String
 
   #belongs_to :original_question, :class_name => "Question"
   #belongs_to :original_answer, :class_name => "Answer"

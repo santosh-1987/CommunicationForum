@@ -25,7 +25,7 @@ class Question
   #index :tags
   #index [    [:group_id, Mongo::ASCENDING],    [:banned, Mongo::ASCENDING],    [:language, Mongo::ASCENDING]  ]
 
-  identity :type => String
+  #identity :type => String
 
   field :title, :type => String, :default => ""
   field :body, :type => String

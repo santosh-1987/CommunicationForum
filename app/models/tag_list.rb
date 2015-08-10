@@ -1,7 +1,7 @@
 class TagList
   include Mongoid::Document
 
-  identity :type => String
+  #identity :type => String
   field :group_id, :type => String
   referenced_in :group
 

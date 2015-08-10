@@ -6,7 +6,7 @@ class Activity
 
   ACTIONS = %w[create update destroy]
 
-  identity :type => String
+  #identity :type => String
 
   field :action, :type => String
   field :scope, :type => Hash

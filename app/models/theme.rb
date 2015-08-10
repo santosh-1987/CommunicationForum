@@ -3,7 +3,7 @@ class Theme
   include MongoidExt::Storage
   include Mongoid::Timestamps
 
-  identity :type => String
+  #identity :type => String
   field :name, :type => String
   field :description, :type => String, :default => ""
 

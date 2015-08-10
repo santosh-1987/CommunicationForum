@@ -10,7 +10,7 @@ class Flag
 
   REASONS = ["spam", "offensive", "attention"]
 
-  identity :type => String
+  #identity :type => String
 
   field :reason, :type => String, :required => true, :default => "spam"
 

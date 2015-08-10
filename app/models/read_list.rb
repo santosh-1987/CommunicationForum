@@ -1,7 +1,7 @@
 class ReadList
   include Mongoid::Document
 
-  identity :type => String
+  #identity :type => String
 
   field :questions, :type => Hash, :default => {} # "id" => date
 

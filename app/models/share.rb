@@ -1,7 +1,7 @@
 class Share
   include Mongoid::Document
 
-  identity :type => String
+  #identity :type => String
   field :fb_app_id, :type => String
   field :fb_secret_key, :type => String
   field :fb_active, :type => Boolean, :default => false

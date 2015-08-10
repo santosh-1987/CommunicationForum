@@ -1,7 +1,7 @@
 class FriendList
   include Mongoid::Document
 
-  identity :type => String
+  #identity :type => String
 
   references_one :user, :validate => false
 

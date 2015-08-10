@@ -2,7 +2,7 @@ class UserStat
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  identity :type => String
+  #identity :type => String
 
   field :answer_tags, :type => Array, :default => []
   field :question_tags, :type => Array, :default => []

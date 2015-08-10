@@ -16,7 +16,7 @@ class Answer
     activity.add_followers(*follower_ids)
   end
 
-  identity :type => String
+  #identity :type => String
 
   field :body, :type => String, :required => true
   field :language, :type =>  String, :default => "en"

@@ -2,7 +2,7 @@ class Invitation
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  identity :type => String
+  #identity :type => String
   field :token, :type => String
   #index :token
   field :email, :type => String

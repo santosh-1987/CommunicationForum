@@ -6,7 +6,7 @@ class Comment
 #   include Shapado::Models::GeoCommon FIXME
 
 
-  identity :type => String
+  #identity :type => String
 
   field :body, :type =>  String
   field :language, :type =>  String, :default => "en"

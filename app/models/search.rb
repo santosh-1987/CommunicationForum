@@ -2,7 +2,7 @@ class Search
   include Mongoid::Document
   include MongoidExt::Slugizer
 
-  identity :type => String
+  #identity :type => String
 
   field :name, :type => String
   field :query, :type => String

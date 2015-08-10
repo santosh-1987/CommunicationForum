@@ -15,7 +15,7 @@ class User
   LANGUAGE_FILTERS = %w[any user] + AVAILABLE_LANGUAGES
   LOGGED_OUT_LANGUAGE_FILTERS = %w[any] + AVAILABLE_LANGUAGES
 
-  identity :type => String
+  #identity :type => String
   field :login,                     :type => String, :limit => 40
   #index :login
 
@@ -26,8 +26,8 @@ class User
   field :location,                  :type => String, :limit => 200
   field :birthday,                  :type => Time
 
-  field :identity_url,              :type => String
-  #index :identity_url
+  field :#identity_url,              :type => String
+  #index :#identity_url
 
   field :role,                      :type => String, :default => "user"
   field :last_logged_at,            :type => Time

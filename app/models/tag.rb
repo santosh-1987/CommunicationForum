@@ -3,7 +3,7 @@ class Tag
   include Mongoid::Timestamps
   include MongoidExt::Storage
 
-  identity :type => String
+  #identity :type => String
   paginates_per 100
 
   field :name,  :type => String

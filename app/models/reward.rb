@@ -1,7 +1,7 @@
 class Reward
   include Mongoid::Document
 
-  identity :type => String
+  #identity :type => String
 
   field :started_at, :type => Time, :default => Time.now
   field :ends_at, :type => Time

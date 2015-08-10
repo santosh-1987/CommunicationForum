@@ -1,7 +1,7 @@
 
 class ReputationEvent
   include Mongoid::Document
-  identity :type => String
+  #identity :type => String
   field :time, :type => Time
   field :event, :type => String
   field :reputation, :type => Float
@@ -12,7 +12,7 @@ end
 
 class ReputationStat
   include Mongoid::Document
-  identity :type => String
+  #identity :type => String
 
   references_many :events, :class_name => "ReputationEvent", :validate => false
 
