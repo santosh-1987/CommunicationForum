@@ -1,7 +1,7 @@
 class ShapadoVersion
   include Mongoid::Document
 
-  field :token, :type => String, :index => true
+  field :token, :type => String, :#index => true
   field :price, :type => Integer
 
   field :page_views, :type => Integer

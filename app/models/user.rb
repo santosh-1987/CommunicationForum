@@ -17,7 +17,7 @@ class User
 
   identity :type => String
   field :login,                     :type => String, :limit => 40
-  index :login
+  #index :login
 
   field :name,                      :type => String, :limit => 100, :default => '', :null => true
 
@@ -27,7 +27,7 @@ class User
   field :birthday,                  :type => Time
 
   field :identity_url,              :type => String
-  index :identity_url
+  #index :identity_url
 
   field :role,                      :type => String, :default => "user"
   field :last_logged_at,            :type => Time
@@ -35,7 +35,7 @@ class User
   field :preferred_languages,       :type => Set, :default => []
 
   field :language,                  :type => String, :default => "en"
-  index :language
+  #index :language
   field :timezone,                  :type => String
   field :language_filter,           :type => String, :default => "user", :in => LANGUAGE_FILTERS
 
@@ -55,7 +55,7 @@ class User
   field :socket_key,                :type => String, :default => lambda { BSON::ObjectId.new.to_s }
 
   field :anonymous,                 :type => Boolean, :default => false
-  index :anonymous
+  #index :anonymous
 
   attr_accessible :anonymous, :login
 

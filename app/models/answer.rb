@@ -20,13 +20,13 @@ class Answer
 
   field :body, :type => String, :required => true
   field :language, :type =>  String, :default => "en"
-  index :language
+  #index :language
   field :flags_count, :type =>  Integer, :default => 0
   field :banned, :type =>  Boolean, :default => false
-  index :banned
+  #index :banned
   field :wiki, :type => Boolean, :default => false
   field :anonymous, :type => Boolean, :default => false
-  index :anonymous
+  #index :anonymous
   field :short_url, :type => String
 
   field :rewarded, :type => Boolean, :default => false
@@ -35,16 +35,16 @@ class Answer
   references_and_referenced_in_many :favoriters, :class_name => "User", :validate => false
 
   referenced_in :group
-  index :group_id
+  #index :group_id
 
   referenced_in :user
-  index :user_id
+  #index :user_id
 
   referenced_in :updated_by, :class_name => "User"
   referenced_in :original_question, :class_name => "Question"
 
   referenced_in :question
-  index :question_id
+  #index :question_id
 
   embeds_many :flags, :as => :flaggable
   embeds_many :comments, :as => :commentable

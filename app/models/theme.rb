@@ -30,7 +30,7 @@ class Theme
   file_key :bg_image, :max_length => 256.kilobytes
 
   file_key :layout_html, :max_length => 256.kilobytes
-  file_key :questions_index_html, :max_length => 256.kilobytes
+  file_key :questions_#index_html, :max_length => 256.kilobytes
   file_key :questions_show_html, :max_length => 256.kilobytes
 
 

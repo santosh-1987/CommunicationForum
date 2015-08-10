@@ -4,7 +4,7 @@ config_file = "/etc/shapado.yml"
 if !File.exist?(config_file)
   config_file = Rails.root+"config/shapado.yml"
 end
-  
+
 if !File.exist?(config_file)
   raise StandardError,  "Config file was not found"
 end

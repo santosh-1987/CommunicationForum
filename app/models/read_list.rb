@@ -7,5 +7,5 @@ class ReadList
 
   belongs_to :user
 
-  index :user_id
+  #index :user_id
 end

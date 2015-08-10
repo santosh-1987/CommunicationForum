@@ -27,7 +27,7 @@ class Badge
 
   field :token, :type => String
   validates_presence_of :token
-  index :token
+  #index :token
 
   field :type, :type => String
   validates_presence_of :type

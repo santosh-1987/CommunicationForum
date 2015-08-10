@@ -4,9 +4,9 @@ class Invitation
 
   identity :type => String
   field :token, :type => String
-  index :token
+  #index :token
   field :email, :type => String
-  index :email
+  #index :email
   field :accepted, :type => Boolean, :default => false
   field :state, :type => String, :default => "pending"
   field :accepted_by, :type => String

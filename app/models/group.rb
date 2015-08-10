@@ -19,7 +19,7 @@ class Group
   field :name, :type => String
   field :subdomain, :type => String
   field :domain, :type => String
-  index :domain, :unique => true
+  #index :domain, :unique => true
   field :legend, :type => String
   field :description, :type => String
   field :default_tags, :type => Array, :default => []
@@ -37,10 +37,10 @@ class Group
 
   field :language, :type => String
   field :languages, :type => Set, :default => Set.new
-  index :languages
+  #index :languages
 
   field :activity_rate, :type => Float, :default => 0.0
-  index :activity_rate
+  #index :activity_rate
 
   field :openid_only, :type => Boolean, :default => false
   field :registered_only, :type => Boolean, :default => false
@@ -104,7 +104,7 @@ class Group
 
   field :stripe_balance, :type => String
   field :stripe_customer_id, :type => String
-  index :stripe_customer_id
+  #index :stripe_customer_id
 
   field :has_late_payment, :type => Boolean, :default => false
   field :upcoming_invoice, :type => Hash
@@ -187,7 +187,7 @@ class Group
     users = User.where(:_id.in => ids)
   end
 
-  index([
+  #index([
     [:state, Mongo::ASCENDING],
     [:domain, Mongo::ASCENDING],
   ], :unique => true)
@@ -379,7 +379,7 @@ class Group
   end
 
   def has_facebook_login?
-    (self.auth_providers.include?("Facebook") && self.domain.index(AppConfig.domain)) || (self.share && self.share.fb_active)
+    (self.auth_providers.include?("Facebook") && self.domain.#index(AppConfig.domain)) || (self.share && self.share.fb_active)
   end
 
   def version_expired?

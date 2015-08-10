@@ -31,7 +31,7 @@ class Activity
 
   field :follower_ids, :type => Array, :default => []
 
-  index :action
+  #index :action
 
   before_validation :store_user_name, :on => :create
   validates_presence_of :user

@@ -19,8 +19,8 @@ class Tag
   referenced_in :group
   referenced_in :user
 
-  index :name
-  index :group_id
+  #index :name
+  #index :group_id
 
   validates_uniqueness_of :name, :scope => :group_id, :allow_blank => false
 

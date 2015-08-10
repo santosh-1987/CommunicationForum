@@ -39,15 +39,15 @@ class Membership
   validates_presence_of :group
   validates_uniqueness_of :user_id, :scope => [:group_id]
 
-  index :group_id
-  index :user_id
-  index :reputation
-  index :state
-  index [
+  #index :group_id
+  #index :user_id
+  #index :reputation
+  #index :state
+  #index [
     [:user_id, Mongo::ASCENDING],
     [:group_id, Mongo::ASCENDING]
   ], :unique => true
-  index [
+  #index [
     [:state, Mongo::ASCENDING],
     [:group_id, Mongo::ASCENDING]
   ]
