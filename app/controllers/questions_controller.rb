@@ -1,27 +1,14 @@
 class QuestionsController < ApplicationController
-  before_filter :login_required, :except => [:new, :create, :index, :show, :related_questions, :tags_for_autocomplete, :retag, :retag_to, :random, :history, :diff]
-  before_filter :admin_required, :only => [:move, :move_to]
-  before_filter :moderator_required, :only => [:close]
-  before_filter :check_permissions, :only => [:solve, :unsolve, :destroy]
-  before_filter :check_update_permissions, :only => [:edit, :update, :revert, :remove_attachment]
-  before_filter :set_active_tag
-  before_filter :check_age, :only => [:show]
-  before_filter :check_create_permissions, :only => [:create, :new]
-  before_filter :check_retag_permissions, :only => [:retag, :retag_to]
-  before_filter :track_pageview
-
-  tabs :default => :questions, :tags => :tags,
-       :new => :ask_question
-
-  subtabs :index => [[:activity, [:activity_at, :desc]],
-                     [:newest, [:created_at, Mongo::DESCENDING]],
-                     [:hot, [[:hotness, Mongo::DESCENDING],
-                             [:views_count, Mongo::DESCENDING]]],
-                     [:followers, [:followers_count, Mongo::DESCENDING]],
-                     [:votes, [:votes_average, Mongo::DESCENDING]],
-                     [:expert, [:created_at, Mongo::DESCENDING]]],
-          :show => [[:votes, [:votes_average, Mongo::DESCENDING]], [:oldest, [:created_at, Mongo::ASCENDING]], [:newest, [:created_at, Mongo::DESCENDING]]]
-  helper :votes
+  #before_filter :login_required, :except => [:new, :create, :index, :show, :related_questions, :tags_for_autocomplete, :retag, :retag_to, :random, :history, :diff]
+  #before_filter :admin_required, :only => [:move, :move_to]
+  #before_filter :moderator_required, :only => [:close]
+  #before_filter :check_permissions, :only => [:solve, :unsolve, :destroy]
+  #before_filter :check_update_permissions, :only => [:edit, :update, :revert, :remove_attachment]
+  #before_filter :set_active_tag
+  #before_filter :check_age, :only => [:show]
+  #before_filter :check_create_permissions, :only => [:create, :new]
+  #before_filter :check_retag_permissions, :only => [:retag, :retag_to]
+  #before_filter :track_pageview
 
   # GET /questions
   # GET /questions.xml
@@ -34,39 +21,7 @@ class QuestionsController < ApplicationController
   # - all the questions tagged with one of the tag I follow_up
 
   def index
-    if current_group.current_theme.has_questions_index_html? && current_group.current_theme.questions_index_html.size > 0
-      @template_format = 'mustache'
-      request.format = :mustache
-    end
-
-    if params[:filter] || session[:filter]
-      filter = params[:filter] || session[:filter]
-      session[:filter] = filter
-      case filter
-      when 'feed'
-        tags = current_user.preferred_tags_on(current_group)
-        user_ids = current_user.friend_list.following_ids
-        user_ids << current_user.id
-        find_questions({ }, :any_of => [{:follower_ids.in => user_ids},
-                                        {:tags.in => tags},
-                                        {:user_id => user_ids}])
-      when 'by_me'
-        find_questions(:user_id => current_user.id)
-      when 'preferred'
-        @current_tags = tags = current_user.preferred_tags_on(current_group)
-        find_questions(:tags => {:$in => tags})
-      when 'expertise'
-        @current_tags = tags = current_user.stats(:expert_tags).expert_tags # TODO: optimize
-        find_questions(:tags => {:$in => tags})
-      when 'contributed'
-        find_questions(:contributor_ids.in => [current_user.id])
-      else
-        session.delete :filter
-        find_questions
-      end
-    else
-      find_questions
-    end
+    
   end
 
 
