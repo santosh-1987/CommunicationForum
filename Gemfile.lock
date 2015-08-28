@@ -1,14 +1,13 @@
 GIT
   remote: git://github.com/dcu/mongoid_ext.git
-  revision: 383f243399f4f3c783be49655c20da8615c62330
+  revision: 1251cf6dbc7888f0f59ee5e0314ecda8e0f60486
+  ref: 1251cf6dbc7888f0f59ee5e0314ecda8e0f60486
   specs:
-    mongoid_ext (0.9.0)
+    mongoid_ext (0.7.1)
       differ (>= 0.1.2)
       encryptor (~> 1.1.3)
       i18n
-      mongoid
-      mongoid-grid_fs
-      rack
+      mongoid (~> 2.3)
       tzinfo
       uuidtools (>= 2.1.1)
 
@@ -53,13 +52,12 @@ GIT
 
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: eeb4a88bd77514e8aeb99866794b0d8132a0ac12
-  branch: 3.0.0-stable
+  revision: 74211e3dcc1e9a1d0da7400861dc6e7533de102c
+  branch: 2.4.0-stable
   specs:
-    mongoid (3.0.23)
+    mongoid (2.4.12)
       activemodel (~> 3.1)
-      moped (~> 1.2)
-      origin (~> 1.0)
+      mongo (<= 1.6.2)
       tzinfo (~> 0.3.22)
 
 GIT
@@ -262,10 +260,6 @@ GEM
       subexec (~> 0.0.4)
     mongo (1.4.0)
       bson (= 1.4.0)
-    mongoid-grid_fs (2.1.0)
-      mime-types (>= 1.0, < 3.0)
-      mongoid (>= 3.0, < 5.0)
-    moped (1.5.3)
     multi_json (1.0.4)
     multi_xml (0.4.4)
     multipart-post (1.2.0)
@@ -323,7 +317,6 @@ GEM
       oa-more (= 0.3.2)
       oa-oauth (= 0.3.2)
       oa-openid (= 0.3.2)
-    origin (1.1.0)
     orm_adapter (0.0.7)
     pdfkit (0.8.0)
     polyglot (0.3.5)

@@ -26,7 +26,7 @@ class User
   field :location,                  :type => String, :limit => 200
   field :birthday,                  :type => Time
 
-  field :#identity_url,              :type => String
+#  field :#identity_url,              :type => String
   #index :#identity_url
 
   field :role,                      :type => String, :default => "user"

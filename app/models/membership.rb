@@ -44,13 +44,13 @@ class Membership
   #index :reputation
   #index :state
   #index [
-    [:user_id, Mongo::ASCENDING],
-    [:group_id, Mongo::ASCENDING]
-  ], :unique => true
+#    [:user_id, Mongo::ASCENDING],
+ #   [:group_id, Mongo::ASCENDING]
+ # ], :unique => true
   #index [
-    [:state, Mongo::ASCENDING],
-    [:group_id, Mongo::ASCENDING]
-  ]
+  #  [:state, Mongo::ASCENDING],
+   # [:group_id, Mongo::ASCENDING]
+ # ]
 
   before_save :update_user_info
   after_create :add_to_user

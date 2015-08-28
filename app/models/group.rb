@@ -284,7 +284,7 @@ class Group
 
   def self.find_file_from_params(params, request)
     if request.path =~ /\/(logo|big|medium|small|css|favicon)\/([^\/\.?]+)/
-      @group = Group.find($2)
+      @group = Group.find($2) rescue Group.new
 
       logo = @group.has_logo? ? @group.logo : Shapado::FileWrapper.new("#{Rails.root}/app/assets/images/logo.png", "image/png")
       case $1
@@ -634,7 +634,7 @@ class Group
   end
 
   def set_shapado_version
-    self.shapado_version_id = ShapadoVersion.where(:token => 'free').first.id
+    self.shapado_version_id = ShapadoVersion.where(:token => 'free').first.id rescue "NW@33"
   end
 
 end

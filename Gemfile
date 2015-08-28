@@ -33,9 +33,9 @@ gem 'bson', '1.4.0'
 gem 'bson_ext', '1.4.0'
 
 gem 'mongo', '1.4.0'
-gem 'mongoid', :git => 'git://github.com/mongoid/mongoid.git', :branch => '3.0.0-stable'
+gem 'mongoid', :git => 'git://github.com/mongoid/mongoid.git', :branch => '2.4.0-stable'
 
-gem 'mongoid_ext', :git => 'git://github.com/dcu/mongoid_ext.git'
+gem 'mongoid_ext', :git => 'git://github.com/dcu/mongoid_ext.git',:ref => '1251cf6dbc7888f0f59ee5e0314ecda8e0f60486'
 
 gem 'mongo_store', :git => 'https://github.com/Houdini/mongo_store.git'
 #gem 'redis'
